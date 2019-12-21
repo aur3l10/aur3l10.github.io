@@ -11,38 +11,41 @@
 
 <body>
   <div class="container">
-    <div class="info info-container">
-      Mancano
-    </div>
-    <div class="date-container">
-      <div id="days_container" class="info-container">
-        <div id="days"></div>
-        <div>Giorni</div>
+    <div class="display-container">
+      <div class="info info-container">
+        Mancano
       </div>
-      <div id="days_container" class="info-container">
-        <div id="hours"></div>
-        <div>Ore</div>
+      <div class="date-container">
+        <div id="days_container" class="info-container">
+          <div id="days"></div>
+          <div>Giorni</div>
+        </div>
+        <div id="days_container" class="info-container">
+          <div id="hours"></div>
+          <div>Ore</div>
+        </div>
+        <div id="days_container" class="info-container">
+          <div id="minutes"></div>
+          <div>Minuti</div>
+        </div>
+        <div id="days_container" class="info-container">
+          <div id="seconds"></div>
+          <div>Secondi</div>
+        </div>
       </div>
-      <div id="days_container" class="info-container">
-        <div id="minutes"></div>
-        <div>Minuti</div>
+      <div class="info info-container">
+        Al 2 Luglio 2020
       </div>
-      <div id="days_container" class="info-container">
-        <div id="seconds"></div>
-        <div>Secondi</div>
-      </div>
-    </div>
-    <div class="info info-container">
-      Al 2 Luglio 2020
     </div>
   </div>
+  <p>Photo by Ian Schneider on Unsplash</p>
 </body>
 
 <style>
   body {
     font-family: 'Dancing Script', cursive;
     background-image: url("./resources/background.jpg");
-    background-position: right;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -59,6 +62,11 @@
   .date-container {
     display: flex;
     flex-direction: row;
+  }
+
+  .display-container {
+    /* background-color: #ffffff; */
+    backdrop-filter: blur(5px)
   }
 
   .info {
