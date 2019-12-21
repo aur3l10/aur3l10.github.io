@@ -11,29 +11,64 @@
 
 <body>
   <div class="container">
-    <p id="countdown" class="countdown"></p>
+    <div class="info info-container">
+      Mancano
+    </div>
+    <div class="date-container">
+      <div id="days_container" class="info-container">
+        <div id="days"></div>
+        <div>Giorni</div>
+      </div>
+      <div id="days_container" class="info-container">
+        <div id="hours"></div>
+        <div>Ore</div>
+      </div>
+      <div id="days_container" class="info-container">
+        <div id="minutes"></div>
+        <div>Minuti</div>
+      </div>
+      <div id="days_container" class="info-container">
+        <div id="seconds"></div>
+        <div>Secondi</div>
+      </div>
+    </div>
+    <div class="info info-container">
+      Al 2 Luglio 2020
+    </div>
   </div>
 </body>
 
 <style>
   body {
     font-family: 'Satisfy', cursive;
-  }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     background-image: url("./resources/background.jpg");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
-  .countdown {
-    font-size: 3rem;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 2rem;
+  }
+
+  .date-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .info {
+    padding: 1rem 0;
+  }
+
+  .info-container {
+    text-align: center;
     text-shadow: #cccccc 1px 0 10px;
+    padding: 0.5rem;
   }
 </style>
 
@@ -57,8 +92,11 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="demo"
-    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
     // If the count down is finished, write some text
     if (distance < 0) {
