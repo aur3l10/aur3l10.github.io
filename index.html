@@ -11,6 +11,7 @@
 
 <body>
   <div class="container">
+    <img src="./resources/wedding.png" alt="a wedding image">
     <div class="display-container">
       <div class="info info-container">
         Mancano
@@ -38,19 +39,18 @@
       </div>
     </div>
   </div>
-  <p>Photo by Ian Schneider on Unsplash</p>
 </body>
 
 <style>
   body {
     font-family: 'Dancing Script', cursive;
-    background-image: url("./resources/background.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    backdrop-filter: blur(5px);
+    background-color: #f6f6f6;
     margin: 0;
     padding: 0;
+  }
+
+  img {
+    width: 400px;
   }
 
   .container {
@@ -65,11 +65,6 @@
   .date-container {
     display: flex;
     flex-direction: row;
-  }
-
-  .display-container {
-    /* background-color: #ffffff; */
-    /* backdrop-filter: blur(5px) */
   }
 
   .info {
