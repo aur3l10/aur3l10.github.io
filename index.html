@@ -12,7 +12,7 @@
 <body>
   <div class="container">
     <img src="./resources/wedding.png" alt="a wedding image">
-    <div class="display-container">
+    <div id="countdown" class="hide">
       <div class="info info-container">
         Mancano
       </div>
@@ -36,6 +36,14 @@
       </div>
       <div class="info info-container">
         Al 8 Luglio 2021
+      </div>
+    </div>
+    <div id="married" class="hide">
+      <div class="info info-container">
+        Sposati dal
+      </div>
+      <div class="info info-container">
+        8 Luglio 2021
       </div>
     </div>
   </div>
@@ -76,6 +84,14 @@
     text-shadow: #cccccc 1px 0 10px;
     padding: 0.5rem;
   }
+
+  .hide {
+    display: none;
+  }
+
+  .show {
+    display: block;
+  }
 </style>
 
 <script>
@@ -107,7 +123,9 @@
     // If the count down is finished, write some text
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
+      document.getElementById("married").className = 'show';
+    } else {
+      document.getElementById("countdown").className = 'show';
     }
   }, 1000);
 </script>
